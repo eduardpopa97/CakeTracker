@@ -1,0 +1,19 @@
+.form-control {
+    display: flex;
+    flex-direction: column;
+    align-content: left;
+}
+
+.home {
+    margin-left: 400px;
+    margin-right: 400px;
+    margin-top: 100px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+}
+
+.sidebyside {
+    display: flex;
+    flex-direction: row;
+}
