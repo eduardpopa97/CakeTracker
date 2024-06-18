@@ -6,7 +6,7 @@ module.exports.checkMemberAge = (req, res, next) => {
     if(new Date(birthdate.getFullYear() + 18, birthdate.getMonth(), birthdate.getDay()) > new Date()) {
         return res.status(200).json({"warning": "The member has to be at least 18 years old"});
     }
-	else next();
+    else next();
 }
 
 module.exports.checkFieldsNotNull = (req, res, next) => {
@@ -14,7 +14,7 @@ module.exports.checkFieldsNotNull = (req, res, next) => {
     req.body.MEMBER_BIRTHDATE === "" || req.body.MEMBER_COUNTRY === "" || req.body.MEMBER_CITY === "") {
         return res.status(200).json({"warning": "All the fields are mandatory"});
     }
-	else next();
+    else next();
 }
 
 module.exports.checkUnique = (req, res, next) => {
@@ -30,7 +30,7 @@ module.exports.checkUnique = (req, res, next) => {
                     {   
                         if(!res.headersSent) return res.status(200).json({"warning": "The member already exists in the database"});       
                     }
-				else next();
+		else next();
             });
 
 }
